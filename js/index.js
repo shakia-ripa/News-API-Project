@@ -7,6 +7,7 @@ const handleCategory = async () => {
     // categories = categories.slice(0, 3);
     categories.forEach((category) => {
         const div = document.createElement('div');
+        
         div.innerHTML = `
             <a onclick="handleLoadNews('${category.category_id}')" class="tab md:text-base lg:text-xl">${category.category_name}</a>
             `;
