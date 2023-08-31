@@ -8,7 +8,7 @@ const handleCategory = async () => {
     categories.forEach((category) => {
         const div = document.createElement('div');
         div.innerHTML = `
-            <a onclick="handleLoadNews('${category.category_id}')" class="tab">${category.category_name}</a>
+            <a onclick="handleLoadNews('${category.category_id}')" class="tab md:text-base lg:text-xl">${category.category_name}</a>
             `;
         tabContainer.appendChild(div);
 
@@ -25,7 +25,7 @@ const handleLoadNews = async (categoryId) => {
     data.data.forEach((news) => {
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card w-auto bg-base-100 shadow-xl">
         <figure><img src=${news?.image_url} alt="News" /></figure>
         <div class="card-body">
             <h2 class="card-title">
