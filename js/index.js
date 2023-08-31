@@ -80,6 +80,7 @@ const showDetails = async (newsId) => {
   <form method="dialog" class="modal-box">
   <div class="card w-auto bg-base-100 p-6 overflow-auto">
   <div class="space-y-4">
+  <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
   <figure><img class="w-4/5" src=${details?.thumbnail_url} alt="News" /></figure>
   <h3 class="font-bold text-lg">${details?.title}</h3>
   <p class="py-4">${details?.details}</p>
@@ -90,13 +91,6 @@ const showDetails = async (newsId) => {
     <p>${details?.author?.published_date}</p>
     </small>
     
-    <div class="modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button
-                    class=" cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
-                    Close
-                </button>
-    </div>
   </form>
 </dialog>
 
